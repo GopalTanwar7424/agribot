@@ -15,7 +15,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://agribot-seven.vercel.app/",  # your Vercel URL
+        "https://agribot-seven.vercel.app",  
         "http://localhost:3000",
     ],
     allow_credentials=True,
