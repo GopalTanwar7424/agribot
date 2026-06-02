@@ -1,0 +1,119 @@
+/* ===== SHARED NAVIGATION ===== */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #1a1a1a;
+}
+
+.nav-links {
+  display: flex;
+  align-items: baseline; /* ✅ Change from 'center' to 'baseline' */
+  gap: 2.5rem;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  cursor: pointer;
+  transition: color 0.3s;
+  letter-spacing: 0.05em;
+  padding: 0;
+  margin: 0; /* ✅ ADD THIS - removes any default margin */
+  line-height: 1;
+  height: 20px; /* ✅ ADD THIS - fixed height for all buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links button:hover {
+  color: #10a37f;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.logout-btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.logout-btn-icon:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+.login-btn {
+  padding: 0;
+  background: none;
+  color: #4a4a4a;
+  border: none;
+  border-radius: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  line-height: 1; /* ✅ IMPORTANT */
+  display: inline-block; /* ✅ ADD THIS */
+  vertical-align: middle; /* ✅ ADD THIS */
+  white-space: nowrap; /* ✅ ADD THIS */
+}
+
+.login-btn:hover {
+  color: #10a37f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links button {
+    font-size: 0.75rem;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+  
+  .login-btn {
+    font-size: 0.75rem;
+  }
+}

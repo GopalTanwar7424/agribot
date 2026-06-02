@@ -1,0 +1,42 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.theme-toggle {
+  display: none; /* Hidden as requested */
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+body.dark-mode .theme-toggle {
+  background: rgba(26, 32, 40, 0.9);
+  color: var(--accent-gold);
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+  color: white;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--accent-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-screen p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

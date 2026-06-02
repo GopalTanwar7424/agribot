@@ -1,0 +1,157 @@
+.camera-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.camera-container {
+  width: 90%;
+  max-width: 600px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.camera-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #212121;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.camera-header h3 {
+  color: #ececec;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #acacac;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #2a2a2a;
+  color: #ececec;
+}
+
+.camera-view {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-view video,
+.camera-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background: #212121;
+}
+
+.capture-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid #10a37f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.capture-btn:hover {
+  transform: scale(1.1);
+}
+
+.capture-btn:active {
+  transform: scale(0.95);
+}
+
+.switch-camera-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: none;
+  color: #ececec;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.switch-camera-btn:hover {
+  background: #3a3a3a;
+}
+
+.action-btn {
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.retake {
+  background: #2a2a2a;
+  color: #ececec;
+}
+
+.action-btn.retake:hover {
+  background: #3a3a3a;
+}
+
+.action-btn.confirm {
+  background: #10a37f;
+  color: white;
+}
+
+.action-btn.confirm:hover {
+  background: #0e8c6b;
+}
+
+@media (max-width: 768px) {
+  .camera-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .camera-view {
+    aspect-ratio: auto;
+    flex: 1;
+  }
+}
+

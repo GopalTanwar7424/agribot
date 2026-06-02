@@ -1,0 +1,324 @@
+/* ===== ABOUT US PAGE ===== */
+.aboutus-page {
+  min-height: 100vh;
+  background: white;
+}
+
+/* Navigation - Fixed and Consistent */
+.aboutus-nav {
+  background: white;
+  padding: 1.5rem 5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  cursor: pointer;
+  transition: color 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.nav-links button:hover {
+  color: #10a37f;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.logout-btn {
+  padding: 0.5rem 1.2rem;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+}
+
+.login-btn {
+  padding: 0.5rem 1.2rem;
+  background: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #0e8c6b;
+}
+
+/* Header with Background Pattern */
+.aboutus-header {
+  background-size: cover;
+  background-position: center;
+  padding: 200px 5%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutus-header-title {
+  position: absolute;   
+  top: 100px;           
+  left: 310px;
+  font-size: 5rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.05em;
+  z-index: 1;
+  font-family: 'Georgia', serif;
+}
+
+/* Main Content Section */
+.aboutus-content-section {
+  padding: 10px 5%;
+  background: white;
+}
+
+.aboutus-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.aboutus-text-content {
+  padding-right: 2rem;
+}
+
+.aboutus-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #373636;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 350;
+}
+
+/* Curved Image Container - Top Right Corner Only */
+.aboutus-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.curved-image-wrapper-topright {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 0 150px 0 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bottom Section */
+.aboutus-bottom-section {
+  padding: 0 5% 100px;
+  background: white;
+  position: relative;
+}
+
+.bottom-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Curved Image Container - Bottom Left Corner Only */
+.farmer-image-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.curved-image-wrapper-bottomleft {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 0 0 0 150px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.farmer-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mission Box - Centered Content */
+.mission-box-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-box {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 80px;
+  border-radius: 0 150px 0 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mission-title {
+  position: relative;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.02em;
+}
+
+.mission-text {
+  position: relative;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #2d2d2d;
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+  font-weight: 350;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutus-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .aboutus-text-content {
+    padding-right: 0;
+  }
+
+  .aboutus-header-title {
+    font-size: 3.5rem;
+  }
+
+  .mission-title {
+    font-size: 2.5rem;
+  }
+
+  .mission-box {
+    border-radius: 40px;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-header {
+    padding: 80px 5%;
+  }
+
+  .aboutus-header-title {
+    font-size: 2.5rem;
+  }
+
+  .aboutus-content-section,
+  .aboutus-bottom-section {
+    padding: 60px 5%;
+  }
+
+  .aboutus-paragraph,
+  .mission-text {
+    font-size: 1rem;
+  }
+
+  .mission-title {
+    font-size: 2rem;
+  }
+
+  .mission-box {
+    padding: 50px 40px;
+  }
+
+  .nav-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links button {
+    font-size: 0.85rem;
+  }
+}
