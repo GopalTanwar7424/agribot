@@ -1,4 +1,3 @@
-@"
 fastapi
 uvicorn
 python-dotenv
@@ -12,4 +11,3 @@ groq
 pillow
 aiofiles
 httpx
-"@ | Out-File -Encoding utf8 requirements.txt
