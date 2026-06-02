@@ -1,3 +1,4 @@
+@"
 fastapi
 uvicorn
 python-dotenv
@@ -6,4 +7,9 @@ gtts
 SpeechRecognition
 python-multipart
 pydantic
-
+pydantic-settings
+groq
+pillow
+aiofiles
+httpx
+"@ | Out-File -Encoding utf8 requirements.txt
