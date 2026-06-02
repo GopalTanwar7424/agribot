@@ -6,8 +6,7 @@ import logging
 import json
 import re
 import base64
-import google.genai as genai
-from google.genai import types
+import google.generativeai as genai
 import PIL.Image
 import io
 
@@ -205,7 +204,7 @@ async def analyze_image_with_groq(
         }
     
     # Initialize client
-    client = genai.Client(api_key=settings.gemini_api_key)
+    
     
     cleaned_context = _clean_text(additional_context)
     
@@ -278,24 +277,18 @@ JSON मध्ये उत्तर द्या (HTML नाही, रंग 
 }}"""
 
     try:
-        # Encode image to base64
-        image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+        # Configure Gemini
+        genai.configure(api_key=settings.gemini_api_key)
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        
+        # Prepare image
+        image_part = {
+            "mime_type": mime_type,
+            "data": image_bytes
+        }
         
         # Call Gemini Vision API
-        response = client.models.generate_content(
-            model='models/gemini-2.5-flash',
-            contents={
-                "parts": [
-                    {"text": prompt},
-                    {
-                        "inline_data": {
-                            "mime_type": mime_type,
-                            "data": image_base64
-                        }
-                    }
-                ]
-            }
-        )
+        response = model.generate_content([prompt, image_part])
         
         raw = response.text.strip()
         logger.info(f"Gemini Vision response: {raw[:200]}...")
