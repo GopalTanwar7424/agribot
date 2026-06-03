@@ -279,7 +279,7 @@ JSON मध्ये उत्तर द्या (HTML नाही, रंग 
     try:
         # Configure Gemini
         genai.configure(api_key=settings.gemini_api_key)
-        model = genai.GenerativeModel('gemini-1.0-pro-vision-latest')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Prepare image
         image_part = {
