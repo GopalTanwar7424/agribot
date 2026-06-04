@@ -118,9 +118,7 @@ function App() {
     );
   }
 
-  if (showAuth) {
-    return <Auth onAuthSuccess={handleAuthSuccess} onClose={() => setShowAuth(false)} />;
-  }
+  
 
   if (sessionId) {
     return (
@@ -139,6 +137,12 @@ function App() {
 
   return (
     <Router>
+      {showAuth && (
+        <Auth 
+          onAuthSuccess={handleAuthSuccess} 
+          onClose={() => setShowAuth(false)} 
+        />
+      )}
       <Routes>
         <Route 
           path="/" 

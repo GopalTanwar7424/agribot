@@ -257,3 +257,51 @@
     padding-top: 2rem;
   }
 }
+@media (max-width: 480px) {
+  .auth-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .auth-content {
+    padding: 0;
+    min-height: unset;
+    width: 100%;
+  }
+
+  .auth-card {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .auth-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .google-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .auth-btn {
+    padding: 0.85rem;
+  }
+}
