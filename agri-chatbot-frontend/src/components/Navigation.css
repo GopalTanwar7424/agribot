@@ -168,17 +168,22 @@
     display: flex;
   }
 
-  .nav-links button {
-    width: 100%;
-    padding: 0.85rem 1.5rem;
-    height: auto;
+  .nav-links button,
+  .nav-links a button {
+    text-align: left;
     justify-content: flex-start;
+    padding: 0.85rem 1.5rem;
+    width: 100%;
+    height: auto;
     font-size: 0.9rem;
     border-bottom: 1px solid #f0f0f0;
   }
 
   .user-menu {
     gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
   }
 
   .username {
