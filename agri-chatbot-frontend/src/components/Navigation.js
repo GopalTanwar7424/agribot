@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
-import { LogOut } from 'lucide-react';
+import { LogOut, Menu, X } from 'lucide-react';
 import './Navigation.css';
 
 const Navigation = ({ onLoginClick, onLogout }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -17,6 +18,7 @@ const Navigation = ({ onLoginClick, onLogout }) => {
   }, []);
 
   const scrollToSection = (sectionId) => {
+    setMenuOpen(false);
     navigate('/');
     setTimeout(() => {
       const element = document.getElementById(sectionId);
@@ -29,18 +31,22 @@ const Navigation = ({ onLoginClick, onLogout }) => {
   return (
     <nav className="top-nav">
       <div className="nav-logo">AGRIBOT</div>
-      <div className="nav-links">
-        <button onClick={() => navigate('/')}>HOME</button>
+
+      {/* Hamburger button - only shows on mobile */}
+      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <button onClick={() => { navigate('/'); setMenuOpen(false); }}>HOME</button>
         <button onClick={() => scrollToSection('features')}>FEATURES</button>
-        <Link to="/about" style={{ textDecoration: 'none' }}>
+        <Link to="/about" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
           <button>WHO WE ARE</button>
         </Link>
-        <button onClick={() => {
-            window.location.href = '/contact';
-            }}>
-            CONTACT US
-            </button>
-        
+        <button onClick={() => { window.location.href = '/contact'; setMenuOpen(false); }}>
+          CONTACT US
+        </button>
+
         {user ? (
           <div className="user-menu">
             <span className="username">👤 {user.email?.split('@')[0]}</span>
@@ -49,7 +55,9 @@ const Navigation = ({ onLoginClick, onLogout }) => {
             </button>
           </div>
         ) : (
-          <button onClick={onLoginClick} className="login-btn">Login / Sign Up</button>
+          <button onClick={() => { onLoginClick(); setMenuOpen(false); }} className="login-btn">
+            Login / Sign Up
+          </button>
         )}
       </div>
     </nav>
