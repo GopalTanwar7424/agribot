@@ -1,3 +1,13 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all search engines to crawl
 User-agent: *
-Disallow:
+Allow: /
+
+# Don't crawl API or private pages
+Disallow: /api/
+Disallow: /admin/
+
+# Point to sitemap
+Sitemap: https://agribot-frontend.vercel.app/sitemap.xml
+
+# Be nice - wait between requests
+Crawl-delay: 5
