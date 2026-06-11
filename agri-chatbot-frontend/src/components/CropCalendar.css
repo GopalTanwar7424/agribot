@@ -329,3 +329,50 @@
     align-self: flex-start;
   }
 }
+
+@media (max-width: 480px) {
+  .chat-container {
+    height: 100dvh;
+  }
+
+  .sidebar {
+    width: 85vw;
+  }
+
+  .messages-area {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .message-row.user {
+    max-width: 95%;
+  }
+
+  .input-wrapper {
+    margin: 0.5rem;
+    border-radius: 16px;
+  }
+
+  .message-input {
+    font-size: 0.9rem;
+  }
+
+  .welcome-screen h1 {
+    font-size: 1.4rem;
+  }
+
+  .suggestion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .message-image img {
+    max-width: 160px;
+  }
+
+  .chat-topbar {
+    padding: 0 0.5rem;
+  }
+
+  .topbar-title h3 {
+    font-size: 0.9rem;
+  }
+}
